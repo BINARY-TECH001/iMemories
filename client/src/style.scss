@@ -1,0 +1,15 @@
+:root {
+  --primary-color: rgb(255, 0, 0);
+  --primarySoft-color: rgb(243, 95, 27);
+}
+
+@mixin mobile {
+  @media (max-width: 655px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}

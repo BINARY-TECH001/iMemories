@@ -1,0 +1,27 @@
+@import "../../style.scss";
+
+.posts__wrapper {
+  position: relative;
+  flex: 2;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.nothing {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primarySoft-color);
+  letter-spacing: 1px;
+  margin-right: 0.5em;
+  background: rgba(209, 209, 209, 0.714);
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
