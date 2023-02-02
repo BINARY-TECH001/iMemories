@@ -12,7 +12,8 @@
   padding: 1em;
 
   @include mobile {
-    width: 98%;
+    width: 96%;
+    margin: 0 auto;
   }
 
   .more {
@@ -118,7 +119,7 @@
 
     span{
       color: blue;
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
 }

@@ -33,7 +33,7 @@ const Post = ({ post, setCurrentId, setFormOpen }) => {
         <p> {post.message} </p>
       </div>
       <div className="tags">
-        <span> {post.tags.map((tag) => `#${tag}`)} </span>
+        <span> {post.tags.map((tag) => ( <span> #{tag} </span> ))} </span>
       </div>
       <div className="actions">
         <button onClick={() => dispatch(likePost(post._id))}>

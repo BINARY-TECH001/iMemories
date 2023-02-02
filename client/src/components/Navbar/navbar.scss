@@ -3,17 +3,66 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 4rem;
     margin: 0 auto;
     top: 0;
     background: #ffffff;
     box-shadow: 1px 1px 3px rgb(178, 178, 178);
     z-index: 999;
+
+    .memories{
+        margin-left: 1em;
+    }
     
     span{
         padding: 1rem 2rem;
         text-align: center;
         font-size: 1.2rem;
         color: var(--primary-color);
+    }
+
+    .userInfo{
+        margin-right: 1em;
+
+
+        .info{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+
+            img{
+                height: 3em;
+                width: 3em;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            h6{
+                color: rgb(40, 39, 39);
+            }
+
+            button{
+                height: 2.5em;
+                width: 7em;
+                font-size: 1em;
+                border: none;
+                border-radius: .5em;
+                background-color: blue;
+                color: #ffffff;
+            }
+
+            .signin button{
+                height: 2em;
+                letter-spacing: 1px;
+                width: 7em;
+                font-size: 1em;
+                border: none;
+                border-radius: .2em;
+                background-color: blue;
+                color: #ffffff;
+            }
+        }
     }
 }

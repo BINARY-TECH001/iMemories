@@ -1,38 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Auth from "./components/Auth/Auth";
+import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import Posts from "./components/Posts/Posts";
-import Form from "./components/Form/Form";
-import { useDispatch } from "react-redux";
-import { getPosts } from "./actions/posts";
 
 function App() {
-  const [currentId, setCurrentId] = useState(null);
-  const [formOpen, setFormOpen] = useState(false);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getPosts());
-  }, [getPosts]);
-
   return (
-    <div className="App">
-      <Navbar />
-
-      <div className="page">
-        <Posts
-          setCurrentId={setCurrentId}
-          formOpen={formOpen}
-          setFormOpen={setFormOpen}
-        />
-        <Form
-          currentId={currentId}
-          setCurrentId={setCurrentId}
-          formOpen={formOpen}
-          setFormOpen={setFormOpen}
-        />
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/auth" exact component={Auth} />
+        </Switch>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
